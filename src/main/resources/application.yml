@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    stream:
+      output-bindings: the-exchange
+      rabbit:
+        bindings:
+          the-exchange:
+            producer:
+              exchangeType: direct
+              routingKeyExpression: '''the.key'''

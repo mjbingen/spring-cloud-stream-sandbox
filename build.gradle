@@ -1,0 +1,19 @@
+plugins {
+    id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    mainClass = 'com.mjb.spring.cloud.Main'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.2.3'
+    implementation 'org.springframework.cloud:spring-cloud-stream:4.1.0'
+    implementation 'org.springframework.cloud:spring-cloud-stream-binder-rabbit:4.1.0'
+}
